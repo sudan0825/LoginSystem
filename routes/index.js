@@ -75,5 +75,22 @@ module.exports = function(passport){
     res.redirect('/');
   });
 
+  /* GET bill Page */
+  router.get('/bill', isAuthenticated, function(req, res){
+    res.render('bill', { user: req.user });
+  });
+  /* GET bill Page */
+  router.get('/manageSensor', isAuthenticated, function(req, res){
+    res.render('manageSensor', { user: req.user });
+  });
+  /* GET bill Page */
+  router.get('/manageSensorHub', isAuthenticated, function(req, res){
+    res.render('manageSensorHub', { user: req.user });
+  });
+  /* GET bill Page */
+  router.get('/report', isAuthenticated, function(req, res){
+    res.render('report', { user: req.user });
+  });
+
   return router;
 }
